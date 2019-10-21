@@ -1,5 +1,5 @@
 # Checkpoint
-1.1 What is a program?
+1.1 What is a program? (some change)
 
 	- A set of instructions to accomplish a task.
 
