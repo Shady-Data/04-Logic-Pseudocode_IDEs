@@ -28,12 +28,12 @@ A mobile phone app allows a user to press a button that starts a timer that coun
 * If the programmer translates the following pseudocode to an actual programming language, a syntax errror is likely to occur.  Can you find the error?
 
 ```
-Declare String 1stPrize
+Declare String 1stPrize // declared variable starts with a 1 instead of a character, variables cannot start with numbers
 
 Display "Enter the award for first prize."
-Input 1stPrize
+Input 1stPrize // invalid variable name
 
-Display "The first prize winner will receive "' 1stPrize
+Display "The first prize winner will receive "' 1stPrize // invalid variable name
 ```
 
 ---
@@ -49,7 +49,7 @@ Input lowest
 Display "Enter the highest score."
 Input highest
 
-Set average = low + high/2
+Set average = low + high/2 // low and high are undeclared variables, should be lowest and highest. order of operations is wrong should be average = (lowest + highest)/2
 Display "The average is ", average, "."
 
 ```
@@ -61,7 +61,7 @@ Display "The average is ", average, "."
 ```
 Display "Enter the length of the room."
 Input length 
-Declare Integer length
+Declare Integer length // variable declaration is after the input call, depending on language, the variable may contain non-integer type data
 
 ```
 
@@ -71,7 +71,7 @@ Declare Integer length
 
 ```
 Declare Integer value1, value2, value3, sum
-Set sum= value1 + value2 + value3
+Set sum= value1 + value2 + value3 // sum is calculated from empty variables, always resulting in 0, sum needs to be set after value1, value2, and value3 have been input.
 
 Display "Enter the first value."
 Input value1
@@ -92,7 +92,7 @@ Display "The sum of numbers is ", sum
 
 ```
 Declare Real pi
-Set 3.14159265 = pi
+Set 3.14159265 = pi // Syntax error, set sytax should be pi = 3.14159265
 Display "The value of pi is ". pi
 ```
 
@@ -104,7 +104,7 @@ Display "The value of pi is ". pi
 Constant Real GRAVITY = 9.81
 Display "Rates of acceleration of an objet in free fall:"
 Display "Earth: ", GRAVITY, " meters per second every second."
-Set GRAVITY = 1.63
+Set GRAVITY = 1.63 // reassigned a constant, GRAVITY should be a declared variable (not Constant) to have it's value reassigned
 Display "Moon: ", GRAVITY, " meters per second every second."
 ```
 
