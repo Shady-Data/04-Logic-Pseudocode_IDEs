@@ -33,7 +33,7 @@ Declare String 1stPrize // declared variable starts with a 1 instead of a charac
 Display "Enter the award for first prize."
 Input 1stPrize // invalid variable name
 
-Display "The first prize winner will receive "' 1stPrize // invalid variable name
+Display "The first prize winner will receive "' 1stPrize // invalid variable name also a unterminated ', shoulb be a comma
 ```
 
 ---
