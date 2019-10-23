@@ -1,10 +1,11 @@
+# CHOOSE THREE PROMPTS (Plus mandatory ones if assigned)
 ## Kilometer Converter
 
 Design a modular program that asks the user to enter a distance in kilometers, and then converts that distance to miles. The conversion formula is as follows:
 
 ![image](https://user-images.githubusercontent.com/47218880/67329523-99b2e300-f4e0-11e9-8a30-3f31fbd76ae1.png)
 
-## Sales Tax Program Refactoring
+## Sales Tax Program Refactoring (Mandatory)
 
 See program below,  the Sales Tax program. This program calculates and displays the county and state sales tax on a purchase. Refactor it so the subtasks are in modules.
 ```
