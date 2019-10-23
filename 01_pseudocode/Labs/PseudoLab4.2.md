@@ -4,6 +4,7 @@
 
 Design a program that prompts the user to enter a number within the range of 1 through 10. The program should display the Roman numeral version of that number. If the number is outside the range of 1 through 10, the program should display an error message.
 
+<<<<<<< HEAD
 Start // romanNumeral
     Declare Integer numEntry
 
@@ -36,12 +37,16 @@ Start // romanNumeral
     End Select
 
 Stop
+=======
+
+>>>>>>> upstream/master
 
 
 # Areas of Rectangles
 
 The area of a rectangle is the rectangle’s length times its width. Design a program that asks for the length and width of two rectangles. The program should tell the user which rectangle has the greater area, or whether the areas are the same.
 
+<<<<<<< HEAD
 Start // rectangleAreaCompare
     Declare Real length1, width1, length2, width2, area1, area2
 
@@ -65,6 +70,8 @@ Start // rectangleAreaCompare
         Display "Both Rectangles have the same area."
 Stop
 
+=======
+>>>>>>> upstream/master
 # Mass and Weight
 
 Scientists measure an object’s mass in kilograms and its weight in Newtons. If you know the amount of mass of an object, you can calculate its weight, in Newtons, with the following formula:
@@ -93,6 +100,7 @@ When you mix blue and yellow, you get green.
 ```
 Design a program that prompts the user to enter the names of two primary colors to mix. If the user enters anything other than “red,” “blue,” or “yellow,” the program should display an error message. Otherwise, the program should display the name of the secondary color that results.
 
+<<<<<<< HEAD
 Start // colorMixer
     Declare String priColor1, priColor2
 
@@ -105,6 +113,8 @@ Select priColor1
     Case red:
         Select
 
+=======
+>>>>>>> upstream/master
 # Book Club Points
 
 Serendipity Booksellers has a book club that awards points to its customers based on the number of books purchased each month. The points are awarded as follows:
