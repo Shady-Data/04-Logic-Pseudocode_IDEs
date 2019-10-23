@@ -97,6 +97,14 @@ While x > 0
    Input x
 End While
 ```
+
+Declare Integer x
+Do
+   Display "Enter a number."
+   Input x
+while x > 0
+End while
+
 * Convert the Do-While loop in the following code to a While loop:
 ```
 Declare String sure
@@ -105,6 +113,12 @@ Do
   Input sure
 While sure != "Y" AND sure != "y"
 ```
+Declare String sure = ""
+While sure != "Y" AND sure != "y"
+  Display "Are you sure you want to quit?"
+  Input sure
+End While
+
 * Convert the following While loop to a For loop:
 ```
 Declare Integer count = 0
@@ -113,6 +127,11 @@ While count < 50
    Set count = count + 1
 End While
 ```
+
+For count in 0 to 49 step 1
+   Display "The count is ", count
+End For
+
 * Convert the following For loop to a While loop:
 ```
 Declare Integer count
@@ -120,3 +139,9 @@ For count = 1 To 50
    Display count
 End For
 ```
+
+Declare Integer count = 1
+While count < 50
+   Display count
+   Set count = count + 1
+End While
