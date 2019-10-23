@@ -14,7 +14,7 @@ Module main
 		Global Boolean eof = True // sentinel value flag for do-while loop operation
 	Do
 		getAuctionDetails()
-	While
+	While eof == True
 	
 	For item in allItems
 		If minReqBid > 300.00 Then

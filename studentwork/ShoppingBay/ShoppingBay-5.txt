@@ -16,7 +16,7 @@ Module main
 	getMaximumReqBid()
 	Do
 		getAuctionDetails()
-	While
+	While eof == True
 	
 	For item in allItems
 		If minReqBid <= maxReqBid Then

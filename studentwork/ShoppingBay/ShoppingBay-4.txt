@@ -14,7 +14,7 @@ Module main
 		Global Boolean eof = True // sentinel value flag for do-while loop operation
 	Do
 		getAuctionDetails()
-	While
+	While eof == True
 	
 	For item in allItems
 		If autionLength >= 14 and auctionLength <= 28 Then
@@ -38,5 +38,40 @@ stop
 			Input minReqBid
 			itemData = (itemID, itemDesc, auctionLength, minReqBid)
 			allItems.insert(itemData)
+		End If
+	return
+
+//Reworked loop, no array/list
+
+Module main
+	Declarations
+		num itemID, // ID number of the Auction
+		String itemDesc, // Description of the item
+		num auctionLength, // length of auction in days
+		real minReqBid, // Minimum Required Bid for Auction
+		Global Boolean flag = True // sentinel value flag for do-while loop operation
+	Do
+		getAuctionDetails()
+	While flag == True
+
+stop
+		
+	Module getAuctionDetails
+		itemData = [] // ensure itemData is empty for the run
+		Display "Enter ID#: "
+		Input itemID
+		If itemID == Null or itemID == 0 Then
+			flag = False
+			return
+		Else
+			Display "Enter Item Description: "
+			Input itemDesc
+			Display "Enter Auction Length, in days: "
+			Input auctionLength
+			Display "Enter the Minimum Required Bid: $"
+			Input minReqBid
+			If autionLength >= 14 and auctionLength <= 28 Then
+				Display "ID: ",itemID, "\nDescription: ", itemDesc, "\nAuction Length: ", auctionLength, "\nMinimum Required Bid: ", minReqBid
+			End If
 		End If
 	return
