@@ -4,12 +4,66 @@
 
 Design a program that prompts the user to enter a number within the range of 1 through 10. The program should display the Roman numeral version of that number. If the number is outside the range of 1 through 10, the program should display an error message.
 
+Start // romanNumeral
+    Declare Integer numEntry
 
+    Display "Enter a number between 1 and 10, inclusive: "
+    Input numEntry
+
+    Select numEntry
+        Case 1:
+            Display "I"
+        Case 2:
+            Display "II"
+        Case 3:
+            Display "III"
+        Case 4:
+            Display "IV"
+        Case 5:
+            Display "V"
+        Case 6:
+            Display "VI"
+        Case 7:
+            Display "VII"
+        Case 8:
+            Display "VIII"
+        Case 9:
+            Display "IX"
+        Case 10:
+            Display "X"
+        Default:
+            Display "Error: outside of expected input range."
+    End Select
+
+Stop
 
 
 # Areas of Rectangles
 
 The area of a rectangle is the rectangle’s length times its width. Design a program that asks for the length and width of two rectangles. The program should tell the user which rectangle has the greater area, or whether the areas are the same.
+
+Start // rectangleAreaCompare
+    Declare Real length1, width1, length2, width2, area1, area2
+
+    Display "Please enter the length of the first rectangle: "
+    Input length1
+    Display "Please enter the width of the first rectangle: "
+    Input width1
+    Display "Please enter the length of the second rectangle: "
+    Input length2
+    Display "Please enter the length of the second rectangle: "
+    Input width2
+
+    Set area1 = length1 * width1
+    Set area2 = length2 * width2
+
+    If area1 > area2 Then
+        Display "The First Rectangle has the greater area."
+    Else If area2 > area1 Then
+        Display "The second Rectangle has the greater area."
+    Else
+        Display "Both Rectangles have the same area."
+Stop
 
 # Mass and Weight
 
@@ -38,6 +92,18 @@ When you mix red and yellow, you get orange.
 When you mix blue and yellow, you get green.
 ```
 Design a program that prompts the user to enter the names of two primary colors to mix. If the user enters anything other than “red,” “blue,” or “yellow,” the program should display an error message. Otherwise, the program should display the name of the secondary color that results.
+
+Start // colorMixer
+    Declare String priColor1, priColor2
+
+    Display "Please enter the first color to mix 'red, yellow, or blue': "
+    Input priColor1
+    Display "Please enter the second color to mix 'red, yellow, or blue': "
+    Input priColor2
+
+Select priColor1
+    Case red:
+        Select
 
 # Book Club Points
 
