@@ -1,0 +1,8 @@
+// This pseudocode is intended to describe
+// computing the price of an item on sale for 10% off
+start
+   input origPrice
+   discount = price * 0.25 // price should be origPrice, price is not defined also should multiply by 0.10 instead of 0.25 as this should be a 10% dicount, not 25%
+   finalPrice = origPrice - discnt //misspelling of dicount will cause an error
+   output finalPrice
+stop

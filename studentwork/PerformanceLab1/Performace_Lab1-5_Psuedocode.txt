@@ -1,0 +1,10 @@
+start
+  Declarations
+    num distanceTraveled
+  Set distanceTraveled = 60 * 5
+  Display "Distanced traveled after 5 hours: ", distanceTraveled
+  Set distanceTraveled = 60 * 8
+  Display "Distanced traveled after 8 hours: ", distanceTraveled
+  Set distanceTraveled = 60 * 12
+  Display "Distanced traveled after 12 hours: ", distanceTraveled
+stop

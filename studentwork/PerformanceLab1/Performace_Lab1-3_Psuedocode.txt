@@ -1,0 +1,9 @@
+start
+  Declarations
+    num landSquareFeet
+    real acreage
+  Display "Amount of land in square feet: "
+  Input landSquareFeet
+  Set acreage = landSquareFeet / 43560
+  Display landSquareFeet, "is ", acreage, "acre(s)."
+stop

@@ -1,0 +1,8 @@
+// This pseudocode is intended to describe
+// computing the per day cost of your rent
+// in a 30-day month
+start
+   input rent
+   costPerDay = rent / 31  // should divide by 30 instead of 31 for a 30-day Month period.
+   output rent // currently outputs what was input, should output costPerDay
+stop

@@ -1,0 +1,27 @@
+start
+  Declarations
+    real itemOnePrice
+    real itemTwoPrice
+    real itemThreePrice
+    real itemFourPrice
+    real itemFivePrice
+    real saleSubtotal
+    real saleTax
+    real saleTotal
+  Display "Price of the first item: "
+  Input itemOnePrice
+  Display "Price of the second item: "
+  Input itemTwoPrice
+  Display "Price of the third item: "
+  Input itemThreePrice
+  Display "Price of the fourth item: "
+  Input itemFourPrice
+  Display "Price of the last item: "
+  Input itemFivePrice
+  Set saleSubtotal = itemOnePrice + itemTwoPrice + itemThreePrice + itemFourPrice + itemFivePrice
+  Display "Subtotal: $", saleSubtotal
+  Set saleTax = saleSubtotal * 0.06
+  Display "6% Sales Tax: $", saleTax
+  Set saleTotal = saleSubtotal + saleTax
+  Display "Total: $", saleTotal
+stop

@@ -1,0 +1,8 @@
+// This pseudocode is intended to compute the number
+// of miles per gallon you get with your automobile.
+start
+   input milesTraveled
+   input gallonsOfGasUsed
+   milesPerGallon = milesTraveled + gallonsOfGas // gallonsOfGas should be gallonsOfGasUsed also should divide instead of add
+   output milsperGallon  // should be milesPerGallon
+start // should stop at this point

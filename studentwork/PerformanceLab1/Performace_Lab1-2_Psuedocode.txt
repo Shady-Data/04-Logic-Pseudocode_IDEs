@@ -1,0 +1,9 @@
+start
+  Declarations
+    real projectedTotalSales
+    real annualProfit
+  Display "Projected Total Sales: "
+  Input projectedTotalSales
+  Set annualProfit = projectedTotalSales * 0.23
+  Display "Projected Annual Profit: ", annualProfit
+stop

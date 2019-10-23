@@ -1,0 +1,26 @@
+requirements
+ - uses ID#, itemDesc, auctionLength (in days), minReqBid
+ - A program that accepts data for one auctioned item. Display data for an auction only if the minimum required bid is more than $250.00.
+
+Module main
+	Declarations
+		num itemID, // ID number of the Auction
+		String itemDesc, // Description of the item
+		num auctionLength, // length of auction in days
+		real minReqBid, // Minimum Required Bid for Auction
+	getAuctionDetails()
+	if minReqBid > 250.00 Then
+		Display "ID: ",itemID, "\nDescription: ", itemDesc, "\nAuction Length: ", auctionLength, "\nMinimum Required Bid: ", minReqBid
+stop
+		
+Module getAuctionDetails
+	Display "Enter ID#: "
+	Input itemID
+	Display "Enter Item Description: "
+	Input itemDesc
+	Display "Enter Auction Length, in days: "
+	Input auctionLength
+	Display "Enter the Minimum Required Bid: $"
+	Input minReqBid
+
+return

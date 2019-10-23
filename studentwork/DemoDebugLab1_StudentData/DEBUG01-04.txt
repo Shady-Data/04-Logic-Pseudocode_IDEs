@@ -1,0 +1,6 @@
+// Program converts tablespoons to teaspoons
+start
+   input tablespoons
+   tablespoons = tablespoons / 3 // reassigns to tablespoons instead of teaspoons
+   output teaspons // undefined variable, should correct assignment above and fix spelling to teaspoons
+stop

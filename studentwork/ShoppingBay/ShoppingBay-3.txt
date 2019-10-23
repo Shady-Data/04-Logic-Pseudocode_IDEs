@@ -1,0 +1,42 @@
+requirements
+ - uses ID#, itemDesc, auctionLength (in days), minReqBid
+ - A program that continuously accepts auction item data and displays data for every auction in which there are no bids yet (in other words, the minimum bid is $0.00) and the length of the auction is seven days or less.
+
+
+Module main
+	Declarations
+		num itemID, // ID number of the Auction
+		String itemDesc, // Description of the item
+		num auctionLength, // length of auction in days
+		real minReqBid, // Minimum Required Bid for Auction
+		tuple itemData // tuple containing itemID, itemDesc, auctionLength, minReqBid
+		list allItems // list containing itemData tuples
+		Global Boolean eof = True // sentinel value flag for do-while loop operation
+	Do
+		getAuctionDetails()
+	While
+	
+	For item in allItems
+		If minReqBid == 0.00 and autionLength <= 7 Then
+			Display "ID: ",itemID, "\nDescription: ", itemDesc, "\nAuction Length: ", auctionLength, "\nMinimum Required Bid: ", minReqBid
+		End If
+stop
+		
+Module getAuctionDetails
+	itemData = [] // ensure itemData is empty for the run
+	Display "Enter ID#: "
+	Input itemID
+	If itemID == Null or itemID == 0 Then
+		eof = False
+		return
+	Else
+		Display "Enter Item Description: "
+		Input itemDesc
+		Display "Enter Auction Length, in days: "
+		Input auctionLength
+		Display "Enter the Minimum Required Bid: $"
+		Input minReqBid
+		itemData = (itemID, itemDesc, auctionLength, minReqBid)
+		allItems.insert(itemData)
+	End If
+return
