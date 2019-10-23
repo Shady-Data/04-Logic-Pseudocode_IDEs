@@ -101,13 +101,45 @@ Start // colorMixer
     Display "Please enter the second color to mix 'red, yellow, or blue': "
     Input priColor2
 
-Select priColor1
-    Case red:
-        Select priColor2
-            Case red:
-                Display "Mixed color is still red."
-            Case blue:
+    Select priColor1
+        Case red:
+            Select priColor2
+                Case red:
+                    Display "Mixed color is still red."
+                Case blue:
+                    Display "Mixed color is purple."
+                Case yellow:
+                    Display "Mixed color is orange."
+                Default:
+                    Display "Error: not a primary color"
+            End Select
+        Case blue:
+            Select priColor2
+                Case red:
+                    Display "Mixed color is purple."
+                Case blue:
+                    Display "Mixed color is still blue."
+                Case yellow:
+                    Display "Mixed color is green."
+                Default:
+                    Display "Error: not a primary color"
+            End Select
+        Case yellow:
+            Select priColor2
+                Case red:
+                    Display "Mixed color is orange."
+                Case blue:
+                    Display "Mixed color is green."
+                Case yellow:
+                    Display "Mixed color is still yellow."
+                Default:
+                    Display "Error: not a primary color"
+            End Select
+        Default:
+            Display "Error: not a primary color"
+    End Select
 
+Stop
 # Book Club Points
 
 Serendipity Booksellers has a book club that awards points to its customers based on the number of books purchased each month. The points are awarded as follows:
@@ -124,6 +156,33 @@ If a customer purchases 4 or more books, he or she earns 60 points.
 ```
 
 Design a program that asks the user to enter the number of books that he or she has purchased this month and displays the number of points awarded.
+
+Module main()
+    Declare int booksPurchased
+
+    getBooksPurchased(booksPurchased)
+    If booksPurchased < 0 Then  // Check if a negative number was entered
+        Set booksPurchased = 0  // Set negative number to avoid default case
+    End If
+    Select booksPurchased
+        Case 0:
+            Display "0 Points earned for this month."
+        Case 1:
+            Display "5 Points earned for this month."
+        Case 2:
+            Display "15 Points earned for this month."
+        Case 3:
+            Display "30 Points earned for this month."
+        Default:
+            Display "60 Points earned for this month."
+    End Select
+Stop
+
+Module getBooksPurchased(int ref booksPurchased)
+    Display "Please enter the number of books you purchased this month: "
+    Input booksPurchased
+return
+
 
 # Software Sales
 
@@ -153,6 +212,27 @@ Design a program that asks the user to enter a number of seconds, and works as f
 
 * There are 86,400 seconds in a day. If the number of seconds entered by the user is greater than or equal to 86,400, the program should display the number of days in that many seconds.
 
+Module main
+    Declare Integer secondsEntry, secondsCalc, minutesCalc, hoursCalc, daysCalc
+
+    call getSeconds()
+    set secondsCalc = secondsEntry // copy user input into another variable to work with, preserves original input
+    While secondsCalc > 60 // loop until the secondsCalc is less then 1 minute
+        If secondsCalc > 86400 Then // check if any days are able to be pulled out of seconds
+            set daysCalc = call calcDays(secondsCalc)
+        Else If secondsCalc > 3600 Then // check if any hours are able to be pulled out of seconds
+            set hoursCalc = call calcHours(secondsCalc)
+        Else If secondsCalc > 60 Then // check if any minutes are able to be pulled out of seconds
+            set minutesCalc = call calcMinutes(secondCalc)
+        Else:
+            Display "Something went wrong, You shouldn't be seeing this message! \n\nWhile loop failed to terminate"
+            break
+        End If
+    Display secondsEntry, "is equivalent to ", daysCalc, " days ", hoursCalc, " hours ", minutesCalc, " minutes and ", secondsCalc, " seconds."
+End Module
+
+
+
 # Leap Year Detector
 
 Design a program that asks the user to enter a year, and then displays a message indicating whether that year is a leap year or not. Use the following logic to develop your algorithm:
@@ -160,3 +240,28 @@ Design a program that asks the user to enter a year, and then displays a message
 * If the year is evenly divisible by 100 and is also evenly divisible by 400, then it is a leap year. For example, 2000 is a leap year but 2010 is not.
 
 * If the year is not evenly divisible by 100, but it is evenly divisible by 4, it is a leap year. For example, 2008 is a leap year but 2009 is not.
+
+Module main
+    Declare Integer yearVar
+    Declare Boolean leapYear
+
+    Display "Enter a year to determine if it's a leap year: "
+    Input yearVar
+
+    Set leapYear = call calcLeapYear(yearVar) //
+    If leapYear Then  // executes if leapYear is True
+        Display yearVar, "is a leap year."
+    Else // executes if leapYear if False
+        Display yearVar, "is not a leap year."
+    End If
+End Module
+
+Module calcLeapYear(Integer yearVar)
+    If yearVar % 100 == 0 AND yearVar % 400 == 0 Then // Check if yearVar is divisible by 100 and 400, no remainders
+        return True
+    Else If yearVar % 4 == 0 Then // Check if yearVar is evenly divisible by 4 if not divisible by 100
+        return True
+    Else
+        return False
+    End If
+End Module
