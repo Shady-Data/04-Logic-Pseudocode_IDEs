@@ -83,8 +83,8 @@ End Module
 
 * Design a nested loop that displays 10 rows of # characters. There should be 15 # characters in each row.
 
-For row 1 to 10
-   For charInRow 1 to 15
+For row 1 to 10 step 1
+   For charInRow 1 to 15 step 1
       Display charInRow
    End For
 End For
