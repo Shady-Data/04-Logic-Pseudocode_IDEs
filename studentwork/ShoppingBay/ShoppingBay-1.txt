@@ -13,14 +13,14 @@ Module main
 		Display "ID: ",itemID, "\nDescription: ", itemDesc, "\nAuction Length: ", auctionLength, "\nMinimum Required Bid: ", minReqBid
 stop
 		
-Module getAuctionDetails
-	Display "Enter ID#: "
-	Input itemID
-	Display "Enter Item Description: "
-	Input itemDesc
-	Display "Enter Auction Length, in days: "
-	Input auctionLength
-	Display "Enter the Minimum Required Bid: $"
-	Input minReqBid
+	Module getAuctionDetails
+		Display "Enter ID#: "
+		Input itemID
+		Display "Enter Item Description: "
+		Input itemDesc
+		Display "Enter Auction Length, in days: "
+		Input auctionLength
+		Display "Enter the Minimum Required Bid: $"
+		Input minReqBid
 
-return
+	return

@@ -24,26 +24,26 @@ Module main
 		End If
 stop
 		
-Module getMaximumReqBid
-	Display "Enter your maximum bid amount: "
-	Input maxReqBid
-return
+	Module getMaximumReqBid
+		Display "Enter your maximum bid amount: "
+		Input maxReqBid
+	return
 
-Module getAuctionDetails
-	itemData = () // ensure itemData is empty for the run
-	Display "Enter ID#: "
-	Input itemID
-	If itemID == Null or itemID == 0 Then
-		eof = False
-		return
-	Else
-		Display "Enter Item Description: "
-		Input itemDesc
-		Display "Enter Auction Length, in days: "
-		Input auctionLength
-		Display "Enter the Minimum Required Bid: $"
-		Input minReqBid
-		itemData = (itemID, itemDesc, auctionLength, minReqBid)
-		allItems.insert(itemData)
-	End If
-return
+	Module getAuctionDetails
+		itemData = () // ensure itemData is empty for the run
+		Display "Enter ID#: "
+		Input itemID
+		If itemID == Null or itemID == 0 Then
+			eof = False
+			return
+		Else
+			Display "Enter Item Description: "
+			Input itemDesc
+			Display "Enter Auction Length, in days: "
+			Input auctionLength
+			Display "Enter the Minimum Required Bid: $"
+			Input minReqBid
+			itemData = (itemID, itemDesc, auctionLength, minReqBid)
+			allItems.insert(itemData)
+		End If
+	return

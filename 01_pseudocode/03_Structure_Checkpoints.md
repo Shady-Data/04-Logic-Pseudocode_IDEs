@@ -1,28 +1,54 @@
 # Checkpoint
 4.1 What is a control structure?
 
+ - A logical, organized design
+
 4.2 What is a decision structure?
+
+ - A split path based on a Boolean Expression
 
 4.3What is a single alternative decision structure?
 
+ - One continual Path/Task
+
 4.4 What is a Boolean expression?
+
+ - True/False
 
 4.5 What types of relationships between values can you test with relational operators?
 
+ - ==, !=, >, >=, <, <=
+
 4.6 Write a pseudocode If-Then statement that assigns 0 to x if y is equal to 20.
 
+ - if y == 20 then
+ -    set x = 0
+ - end if
+
 4.7 Write a pseudocode If-Then statement that assigns 0.2 to commission if sales is greater than or equal to 10,000.
+
+ - if sales >= 10000 then
+ -  set commision = 0.2
+ - end if
+
 4.8 How does a dual alternative decision structure work?
+
+ - accounts for both true/false options of a decision
 
 4.9 What statement do you use in pseudocode to write a dual alternative decision structure?
 
+ - if, then, else, elif
+
 4.10 When you write an If-Then-Else statement, under what circumstances do the statements that appear between Else and End If execute?
+
+ - When the if condition is False
+
 4.11 If the following pseudocode were an actual program, what would it display?
 ```
 If "z" < "a" Then
    Display "z is less than a."
 Else
-   Display "z is not less than a."
+   Display "z is not less than a." // 
 End If
 ```
 4.12 If the following pseudocode were an actual program, what would it display?
@@ -40,9 +66,15 @@ End If
 
 4.13 How does a dual alternative decision structure work?
 
+ - Planning/working for both possibilities of a decision point
+
 4.14 What statement do you use in pseudocode to write a dual alternative decision structure?
 
+ - If-Then-Else
+
 4.15 When you write an If-Then-Else statement, under what circumstances do the statements that appear between the Else clause and the End If clause execute?
+
+ - When the If statement if False
 
 4.16 Convert the following pseudocode to an If-Then-Else If statement:
 ```
