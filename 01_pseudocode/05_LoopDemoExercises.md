@@ -118,4 +118,139 @@ Program Output
 9
 11
 ```
+# Program 5-5
+```
+ 1  // Variables
+ 2  Declare Integer counter, square, upperLimit
+ 3
+ 4  // Get the upper limit.
+ 5  Display "This program displays numbers, starting at 1,"
+ 6  Display "and their squares. How high should I go?"
+ 7  Input upperLimit
+ 8
+ 9  // Display table headings.
+10  Display "Number", Tab, "Square"
+11  Display "--------------------"
+12
+13  // Display the numbers and their squares.
+14  For counter = 1 To upperLimit
+15     // Calculate number squared.
+16     Set square = counter^2
+17
+18     // Display number and number squared.
+19     Display counter, Tab, square
+20  End For
+```
+```
+Program Output
+This program displays numbers, starting at 1,
+and their squares. How high should I go?
+5 [Enter]
+```
+![image](https://user-images.githubusercontent.com/47218880/67425915-92520f00-f59e-11e9-8a76-cc0cd143bb56.png)
 
+# Program 5-6
+```
+ 1  // Variables
+ 2  Declare Integer counter, square,
+ 3                  lowerLimit, upperLimit
+ 4
+ 5  // Get the lower limit.
+ 6  Display "This program displays numbers and"
+ 7  Display "their squares. What number should"
+ 8  Display "I start with?"
+ 9  Input lowerLimit
+10
+11  // Get the upper limit.
+12  Display "What number should I end with?"
+13  Input upperLimit
+14
+15  // Display table headings.
+16  Display "Number", Tab, "Square"
+17  Display "-----------------------"
+18
+19  // Display the numbers and their squares.
+20  For counter = lowerLimit To upperLimit
+21     // Calculate number squared.
+22     Set square = counter^2
+23
+24     // Display number and number squared.
+25     Display counter, Tab, square
+26  End For
+```
+```
+Program Output
+This program displays numbers and
+their squares. What number should
+I start with?
+3 [Enter] 
+What number should I end with?
+7 [Enter]
+```
+![image](https://user-images.githubusercontent.com/47218880/67426000-c1688080-f59e-11e9-8931-f1ea69fd8673.png)
+
+# Program 5-7
+```
+ 1  // Declare and initialize a counter variable.
+ 2  Declare Integer counter = 1
+ 3
+ 4  // Constant for the maximum value
+ 5  Constant Integer MAX_VALUE = 5
+ 6
+ 7  While counter <= MAX_VALUE
+ 8     Display "Hello world"
+ 9     Set counter = counter + 1
+10  End While
+```
+```
+Program Output
+Hello world
+Hello world
+Hello world
+Hello world
+Hello world
+```
+
+#Program 5-8
+```
+ 1  // Declare a variable to hold each number
+ 2  // entered by the user.
+ 3  Declare Integer number
+ 4
+ 5  // Declare an accumulator variable,
+ 6  // initialized with 0.
+ 7  Declare Integer total = 0
+ 8
+ 9  // Declare a counter variable for the loop.
+10  Declare Integer counter
+11
+12  // Explain what we are doing.
+13  Display "This program calculates the"
+14  Display "total of five numbers."
+15
+16  // Get five numbers and accumulate them.
+17  For counter = 1 To 5
+18       Display "Enter a number."
+19       Input number
+20      Set total = total + number
+21   End For
+22
+23   // Display the total of the numbers.
+24   Display "The total is ", total
+```
+```
+Program Output (with Input Shown in Bold)
+This program calculates the
+total of five numbers.
+Enter a number.
+2 [Enter] 
+Enter a number.
+4 [Enter] 
+Enter a number.
+6 [Enter] 
+Enter a number.
+8 [Enter] 
+Enter a number.
+10 [Enter] 
+The total is 30
+```

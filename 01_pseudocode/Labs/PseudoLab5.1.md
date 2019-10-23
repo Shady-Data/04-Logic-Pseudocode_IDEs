@@ -1,4 +1,4 @@
-#Exercise Workbench
+# Exercise Workbench
 * Design a While loop that lets the user enter a number. The number should be multiplied by 10, and the result stored in a variable named product. The loop should iterate as long as product contains a value less than 100.
 
 Module main
