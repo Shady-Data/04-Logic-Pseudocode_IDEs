@@ -60,6 +60,9 @@ and
 
 Design a program that asks the user to enter a nonnegative integer and then displays the factorial of that number.
 
+Module main
+    Declare integer factorial, 
+
 # Multiplication Table
 
 Design a program that uses nested loops to display a multiplication table for the numbers 1 through 12. The program’s output should look like this:
@@ -82,3 +85,12 @@ and so forth..
 
 12 * 12 = 144
 ```
+Module main
+    Declare integer counter, multiplier, product
+
+    For counter = 1 To 12
+        For multiplier = 0 To 12
+            set product = counter * multiplier
+            Display counter, " * ", multiplier, " = ", product
+        End For
+    End For

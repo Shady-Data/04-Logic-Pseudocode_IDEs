@@ -85,7 +85,7 @@ End Module
 
 For row 1 to 10 step 1
    For charInRow 1 to 15 step 1
-      Display charInRow
+      Display #
    End For
 End For
 
