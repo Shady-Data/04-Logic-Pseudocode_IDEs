@@ -34,6 +34,30 @@ Design a program that displays a table of the Celsius temperatures 0 through 20 
 
 where F is the Fahrenheit temperature and C is the Celsius temperature. Your program must use a loop to display the table.
 
+Module main
+    Declare Integer celsius
+    Declare Real fahrenheit
+
+    Display "⌐———————————————————————¬" // starting line of table
+    Display "| Celsius  | Fahrenheit |" // column headers
+    Display "|———————————————————————|"
+    For celsius = 0 to 20 step 1
+        set fahrenheit = (9/5) * celsius + 32
+        If celsius < 10 Then
+            Display "|     ", celsius, "     |    ", fahrenheit, "    |"
+        Else
+            Display "|     ", celsius, "    |    ", fahrenheit, "    |"
+        End If
+        If celsius == 20 Then
+            Display "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
+        Else
+            Display "|———————————————————————|" // 
+        End If
+    End For
+End Module
+    
+
+
 # Pennies for Pay
 
 Design a program that calculates the amount of money a person would earn over a period of time if his or her salary is one penny the first day, two pennies the second day, and continues to double each day. The program should ask the user for the number of days. Display a table showing what the salary was for each day, and then show the total pay at the end of the period. The output should be displayed in a dollar amount, not the number of pennies.
@@ -61,8 +85,20 @@ and
 Design a program that asks the user to enter a nonnegative integer and then displays the factorial of that number.
 
 Module main
-    Declare integer factorial, 
+    Declare integer counter, factorial, product
 
+    Display "Enter a positive integer, no decimals number: "
+    Input factorial
+    If factorial < 0 Then
+        Display "Not a positive number! Exiting!"
+    Else
+        set product = 1 // initialize product with a value of 1 for the for loop multiplication reassignment
+        For counter = 1 To factorial Step 1
+            set product = product * counter
+        End For
+        Display factorial, "! is ", product
+    End If
+End Module
 # Multiplication Table
 
 Design a program that uses nested loops to display a multiplication table for the numbers 1 through 12. The program’s output should look like this:
@@ -88,8 +124,8 @@ and so forth..
 Module main
     Declare integer counter, multiplier, product
 
-    For counter = 1 To 12
-        For multiplier = 0 To 12
+    For counter = 1 To 12 Step 1
+        For multiplier = 0 To 12 Step 1
             set product = counter * multiplier
             Display counter, " * ", multiplier, " = ", product
         End For
