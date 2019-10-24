@@ -37,8 +37,10 @@ Design an algorithm that prompts the user to enter a secret word. The secret wor
 Declare String userInput
 Display "Enter a secret word: "
 Input userInput
-If length(userInput) < 8 Then
-   "The secret word must be at least 8 characters long!"
+While length(userInput) < 8
+   Display "The secret word must be at least 8 characters long!"
+   Display "Enter a secret word: "
+   Input userInput
 
 # Debugging Exercises
 
