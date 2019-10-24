@@ -146,7 +146,7 @@ Function Void main()
     Case "Lose":
       Display "You Lose!"
     Case "Draw":
-      return main()
+      Call main() // call itself again to play again
     Case "Failure":
       Display "Something went wrong"
     Default:
