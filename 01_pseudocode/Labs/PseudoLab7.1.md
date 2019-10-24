@@ -21,9 +21,35 @@ Design a program that gives simple math quizzes. The program should display two 
 ```
 The program should allow the student to enter the answer. If the answer is correct, a message of congratulations should be displayed. If the answer is incorrect, a message showing the correct answer should be displayed.
 
+Module main
+  Declare real num1, num2, result, userNum
+
+  set num1 = getRandNum()
+  set num2 = getRandNum()
+  set result = num1 + num2
+  Display num1, " + " num2
+  Input userNum
+  If userNum == result Then
+    Display "Correct!"
+  Else
+    Display "Incorrect! The correct answer is ", result
+  End IF
+
+  Function real getRandNum()
+    return random(0, 1000000)
+  End Function
+End Module
+
 ## Maximum of Two Values
 
 Design a function named max that accepts two integer values as arguments and returns the value that is the greater of the two. For example, if 7 and 12 are passed as arguments to the function, the function should return 12. Use the function in a program that prompts the user to enter two integer values. The program should display the value that is the greater of the two.
+
+Function Integer max(Integer numVar1, Integer numVar1)
+  If numVar1 > numVar2 Then
+    Return numVar1
+  Else
+    Return numVar2
+End Function
 
 ## Falling Distance
 
@@ -58,6 +84,9 @@ Design a number guessing game program. The program should generate a random numb
 A prime number is a number that is only evenly divisible by itself and 1. For example, the number 5 is prime because it can only be evenly divided by 1 and 5. The number 6, however, is not prime because it can be divided evenly by 1, 2, 3, and 6.
 
 Design a Boolean function named isPrime, which takes an integer as an argument and returns True if the argument is a prime number, or False otherwise. Use the function in a program that prompts the user to enter a number and then displays a message indicating whether the number is prime.
+
+Function Boolean isPrime(Integer number)
+  If number % 2 == 0 OR 
 
  ### TIP:
 Recall that the MOD operator divides one number by another and returns the remainder of the division. In an expression such as num1 MOD num2, the MOD operator will return 0 if num1 is evenly divisible by num2.

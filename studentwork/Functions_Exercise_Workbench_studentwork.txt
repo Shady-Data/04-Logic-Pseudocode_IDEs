@@ -1,0 +1,59 @@
+1.
+Function randomNum()
+    Declare real rand
+    return rand = random(1, 100)
+End Function
+
+2.
+Module main
+    Declare real result, number
+
+    getNumber()
+    set result = half(number)
+    Display result
+
+    Function Real half(Real value)
+        Return value / 2
+    End Function
+
+End Module
+
+3.
+Module main
+    Declare Integer result
+
+    Set result = cube(4)
+    Display result
+End Module
+
+Funtion Integer cube(Integer num)
+    return num * num * num
+End Function
+
+4.
+Function Integer timesTen(Integer someNumber)
+    Return someNumber * 10
+End Function
+
+5.
+Function String getFirstName()
+    Declare String firstName
+
+    Display "Please enter your first name: "
+    Input firstName
+    Return firstName
+End Function
+
+6.
+Set str2 = toUpper(str1)
+
+Debug exercise 1
+random(7,1) // range is backwards, should be 7, 1
+
+Debug exercise 2
+ return discount // wrong variable returned, should be discountPrice
+
+Debug exercise 3
+
+Call tenPercent(value) // nothing it done eith the return of the function should set the returned data to result
+Display "10 percent of ", value, " is ", result // result is not initiallized
