@@ -75,6 +75,22 @@ Design a function named kineticEnergy that accepts an object’s mass (in ­kilo
 
 In this chapter you saw an example of how to design an algorithm that determines whether a number is even or odd. Design a program that generates 100 random numbers, and keeps a count of how many of those random numbers are even and how many are odd.
 
+Module main
+  Declare Integer randInt, odd, even
+
+  Set odd = 0
+  set even = 0
+
+  For 1 To 100 Step 1
+    set randInt = random(1, 1000000000000000000000)
+    If randInt % 2 == 0 Then
+      set even = even + 1
+    Else 
+      set odd = odd + 1
+    End If
+  End For
+End Module
+
 ## Guess the Number
 
 Design a number guessing game program. The program should generate a random number and then ask the user to guess the number. Each time the user enters his or her guess, the program should indicate whether it was too high or too low. The game is over when the user correctly guesses the number. When the game ends, the program should display the number of guesses that the user made.
@@ -115,6 +131,91 @@ If one player chooses paper and the other player chooses rock, then paper wins. 
 
 If both players make the same choice, the game must be played again to determine the winner.
 ```
+
+Function Void main()
+  Declare Integer randInt
+  Declare String compChoice, userChoice, result
+
+  set randInt = random(1, 3)
+  set compChoice = rpsComp(randInt)
+  set userChoice = rpsUser()
+  set result = rps(userChoice, compChoice)
+  Select result
+    Case "Win":
+      Display "You Win!"
+    Case "Lose":
+      Display "You Lose!"
+    Case "Draw":
+      return main()
+    Case "Failure":
+      Display "Something went wrong"
+    Default:
+      Display "You should never see this!!!"
+  End Select
+End Function
+
+Function String rpsComp(Integer num)
+  Select num
+    Case 1:
+      Return "rock"
+    Case 2:
+      Return "paper"
+    Case 3:
+      Return "scissors"
+    Default:
+      Return "Something went wrong"
+  End Select
+End Function
+
+
+Function String rpsUser()
+  Declare String userInput
+
+  Display "Select either 1: rock, 2: paper, 3: scissors: "
+  Input userInput
+  
+  If userInput == "1" OR userInput == "rock"
+    Return "rock"
+  Else If userInput == "2" OR userInput == "paper"
+    Return "paper"
+  Else If userInput == "3" OR userInput == "scissors"
+    Return "scissors"
+  Else
+    Display "Bad Input/Choice"
+    Return rpsUser() // recursive call until good input
+  End If
+End Function
+
+
+Function String rps(String user, String comp)
+  Display "You played ", user
+  Display "Computer played ", comp
+  If user == comp Then
+    Display "Draw! Play Again until a winner is chosen"
+    Return "Draw"
+  Else If user == "rock" AND comp == "paper"
+    Display "Paper wraps Rock."
+    Return "Lose"
+  Else If user == "paper" AND comp == "rock"
+    Display "Paper wraps Rock."
+    Return "Win"
+  Else If user == "rock" AND comp == "scissors"
+    Display "Rock smashes Scissors."
+    Return "Win"
+  Else If user == "scissors" AND comp == "rock"
+    Display "Rock smashes Scissors."
+    Return "Lose"
+  Else If user == "scissors" AND comp == "paper"
+    Display "Scissors cuts Paper."
+    Return "Win"
+  Else If user == "paper" AND comp == "scissors"
+    Display "Scissors cuts Paper."
+    Return "Lose"
+  Else
+    Return "Failure"
+  End If
+End Function
+      
 
 ## Slot Machine Simulation
 
