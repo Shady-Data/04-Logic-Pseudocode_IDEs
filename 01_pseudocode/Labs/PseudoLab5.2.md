@@ -38,20 +38,20 @@ Module main
     Declare Integer celsius
     Declare Real fahrenheit
 
-    Display "⌐———————————————————————¬" // starting line of table
-    Display "| Celsius  | Fahrenheit |" // column headers
-    Display "|———————————————————————|"
+    Display "╔══════════╤════════════╗" // starting line of table
+    Display "║ Celsius  | Fahrenheit ║" // column headers
+    Display "╠══════════╪════════════╣"
     For celsius = 0 to 20 step 1
         set fahrenheit = (9/5) * celsius + 32
         If celsius < 10 Then
-            Display "|     ", celsius, "     |    ", fahrenheit, "    |"
+            Display "║     ", celsius, "     |    ", fahrenheit, "    ║"
         Else
-            Display "|     ", celsius, "    |    ", fahrenheit, "    |"
+            Display "║     ", celsius, "    |    ", fahrenheit, "    ║"
         End If
         If celsius == 20 Then
-            Display "¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"
+            Display "╚══════════╧════════════╝" // Last line of the table
         Else
-            Display "|———————————————————————|" // 
+            Display "╟──────────┼────────────╢" // 
         End If
     End For
 End Module

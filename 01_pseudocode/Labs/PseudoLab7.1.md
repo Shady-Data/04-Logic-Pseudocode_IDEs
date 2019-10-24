@@ -174,11 +174,11 @@ Function String rpsUser()
   Display "Select either 1: rock, 2: paper, 3: scissors: "
   Input userInput
   
-  If userInput == "1" OR userInput == "rock"
+  If userInput == "1" OR toLower(userInput) == "rock"
     Return "rock"
-  Else If userInput == "2" OR userInput == "paper"
+  Else If userInput == "2" OR toLower(userInput) == "paper"
     Return "paper"
-  Else If userInput == "3" OR userInput == "scissors"
+  Else If userInput == "3" OR toLower(userInput) == "scissors"
     Return "scissors"
   Else
     Display "Bad Input/Choice"
