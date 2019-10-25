@@ -57,11 +57,17 @@ Function Real getTicketsSales(Real price, Integer maxSeats)
 			Set sectionID = "C"
 	End Select
 
-	Do
-		Display sectionID, "
-		Display "Enter number of seats sold: "
+	Display "Enter number of seats sold for ", sectionID, ": "
+	Input ticketsSold
 
-	
+	While ticketsSold < 0 OR tiscketsSold > maxSeats
+		Display "Ticket sales for section ", sectionID," cannot be negative or exceed the number of seats in the section (", maxSeats, ")"
+		Display "Enter number of seats sold for ", sectionID, ": "
+		Input ticketsSold
+	End While
+
+	Return price * ticketsSold
+End Function
 
 ## Fat Gram Calculator
 
@@ -78,6 +84,34 @@ Once correct data has been entered, the program should calculate and display the
 ![image](https://user-images.githubusercontent.com/47218880/67504468-0ba93a80-f64f-11e9-85d0-f080ac66a64a.png)
 
 Some nutritionists classify a food as “low fat” if less than 30 percent of its calories come from fat. If the results of this formula are less than 0.3, the program should display a message indicating the food is low in fat.
+
+
+Module fatGramCalc
+	Declare Integer fatGrams, calories
+	Declare Real percentCalsFromFat
+
+	Do
+		Display "Please enter the total calories: "
+		Input calories
+	While calories < 0
+
+	Display "Please enter the amount of grams of fat: "
+	Input fatGrams
+	
+	While fatGrams < 0 OR fatGrams * 9 > calories
+		Display "Invalid entry! Amount of grams of fat cannot be negative"
+		Display "Calculated calories from fat cannot exceed total calories (grams of fat * 9)"
+		Display "Please enter the amount of grams of fat: "
+		Input fatGrams
+	End While
+
+	Set percentCalsFromFat = ((fatGrams * 9) / calories) * 100
+	Display "%", percentCalsFromFat, " calories from fat."
+	If percentCalsFromFat < 30 Then
+		Display "Low-Fat"
+	End If
+End Module
+
 
 ## Speeding Violation Calculator
 
