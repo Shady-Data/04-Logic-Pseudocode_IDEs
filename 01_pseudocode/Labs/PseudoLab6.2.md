@@ -4,13 +4,158 @@
 
 Design a program that asks the user to enter a store’s sales for each day of the week. The amounts should be stored in an array. Use a loop to calculate the total sales for the week and display the result.
 
+
+Module main
+    Constant Integer SIZE = 7
+    Declare Integer index
+    Declare Real totalSales, salesArray[SIZE]
+    Declare String daysOfWeek[SIZE] = "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+
+    Set totalSales = 0
+
+    For index = 0 to SIZE - 1
+        Set salesArray[index] = getSales(daysOfWeek[index])
+        Set totalSales = totalSales + salesArray[index]
+    End For
+
+    Display "Total Sales for the week: $", totalSales
+End Module
+
+Function Real getSales(String day)
+    Declare real sales
+
+    Display "Enter the amount of sales for ", day, ": "
+    Input sales
+    While sales < 0
+        Display "Sales should not be negative for this program!"
+        Display "Enter the amount of sales for ", day, ": "
+        Input sales
+    End While
+End Function
+
+
 ## Lottery Number Generator
 
 Design a program that generates a 7-digit lottery number. The program should have an Integer array with 7 elements. Write a loop that steps through the array, randomly generating a number in the range of 0 through 9 for each element. Then write another loop that displays the contents of the array.
 
+
+Module main
+    Constant Integer SIZE = 7
+    Declare Integer index, num, lottery[SIZE]
+
+    For index = 0 to SIZE - 1
+        Set lottery[index] = random(0, 9)
+    End For
+
+    For EACH num in lottery
+        Display num
+    End For
+End Module
+
+
 ## Rainfall Statistics
 
 Design a program that lets the user enter the total rainfall for each of 12 months into an array. The program should calculate and display the total rainfall for the year, the average monthly rainfall, and the months with the highest and lowest amounts.
+
+
+Module main
+    Constant Integer SIZE = 12
+    Declare Integer index
+    Declare Real totalRainfall, rainfallArray[SIZE]
+    Declare String months[SIZE] = "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+
+    Set totalRainfall = 0
+
+    For index = 0 to SIZE - 1
+        Set rainfallArray[index] = getRainfall(months[index])
+        Set totalRainfall = totalRainfall + rainfallArray[index]
+    End For
+
+    Display "Total rainfall for the year: ", totalRainfall
+    Display "Average Monthly Rainfall: ", getAverage(totalRainfall, SIZE)
+    Call getHighestRainfall(rainfallArray, months, SIZE)
+    Call getLowestRainfall(rainfallArray, months, SIZE)
+End Module
+
+Function Real getRainfall(String month)
+    Declare Real rainfall
+
+    Display "Please enter the amount of rainfall for ", month, ": "
+    Input rainfall
+    While rainfall < 0
+        Display "Invalid Input! Rainfall cannot be negative!"
+        Display "Please enter the amount of rainfall for ", month, ": "
+        Input rainfall
+    Return rainfall
+End Function
+
+Function Real getAverage(real total, Integer SIZE)
+    Declare Real average
+    Declare Integer index
+
+    Set total = 0
+    For index = 0 to SIZE - 1
+        total = total + array[index]
+    End For
+    
+    Set average = total / SIZE
+    Return average
+End Function
+
+Function Void getHighestRainfall(Real array, String months, Integer SIZE)
+    Declare Integer index
+    Declare Real highestRainfall
+    Declare String highestMonth
+
+    // initialize variables with the first element of the arrays
+    Set highestRainfall = array[0]
+    Set highestMonth = months[0]
+    // Set index to 1 to start iterating from the second element of the arrays
+    Set index = 1
+
+    While index < SIZE
+        // Check if rainfall is greater than element stored in highestRainfall
+        If array[index] > highestRainfall Then
+            // Set highestRainfall and highestMonth to the associated index if True
+            Set highestRainfall = array[index]
+            Set highestMonth = months[index]
+        End If
+        // increment index by 1 to continue iterating through the elements in the arrays
+        Set index = index + 1
+    End While
+    
+    // Display the lowest elements in the arrays
+    Display "Most Rainfall: ", highestMonth, " @ ", highestRainfall
+    Return
+End Function
+
+Function Void getLowestRainfall(Real array, String months, Integer SIZE)
+    Declare Integer index
+    Declare Real lowestRainfall
+    Declare String lowestMonth
+
+    // initialize variables with the first element of the arrays
+    Set lowestRainfall = array[0]
+    Set lowestMonth = months[0]
+    // Set index to 1 to start iterating from the second element of the arrays
+    Set index = 1
+
+    While index < SIZE
+        // Check if rainfall is less than element stored in lowestRainfall
+        If array[index] < lowestRainfall Then
+            // Set lowestRainfall and lowestMonth to the associated index if True
+            Set lowestRainfall = array[index]
+            Set lowestMonth = months[index]
+        End If
+        // increment index by 1 to continue iterating through the elements in the arrays
+        Set index = index + 1
+    End While
+    
+    // Display the lowest elements in the arrays
+    Display "Least Rainfall: ", lowestMonth, " @ ", lowestRainfall
+    Return
+End Function
+
 
 ## Number Analysis Program
 
