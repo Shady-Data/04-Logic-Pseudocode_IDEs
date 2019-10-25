@@ -131,14 +131,15 @@ While toLower(answer) != "yes" AND toLower(answer) != "no"
    
 ```
 ```
-// Get the answer to the question.
-Display "Is your supervisor an effective leader?"
-Input answer
-// Validate the input.
-While toLower(answer) != "yes" AND toLower(answer) != "no"
-   Display "Please answer yes or no. Is your supervisor an"
-   Display "effective leader?"
-   Input answer
+// Get the new password.
+Display "Enter your new password."
+Input password
+// Validate the length of the password.
+While length(password) < 6
+   Display "The password must be at least six"
+   Display "characters long. Enter your new password."
+   Input password
+End While
  ```
  
 
